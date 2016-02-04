@@ -235,7 +235,8 @@
             textRotator('.change-text.objpeople span');
 
             $('.js-flickity').fadeTo( "fast", 1 );
-            $('.tmblr-iframe--controls').remove();
+            setTimeout(function(){$('.tmblr-iframe--controls').remove();},800);
+            
         });
     </script>
 
