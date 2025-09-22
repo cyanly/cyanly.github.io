@@ -1,5 +1,10 @@
 *Cyanly Thoughts*
 
+## [Building an App Without Writing a Single Line of Code](/blog/building-crypto-app-with-claude-code-2025)
+###### *Sep 23, 2025*
+> Built an entire stable dollar bridging dApp app only by Claude Code coding agent, experiences and thoughts.
+---
+
 ## [GoTrade - github.com/cyanly/gotrade](/blog/gotrade-fix-trading-system-golang-2016)
 ###### *Jan 23, 2016*
 > a FIX protocol electronic trading and order management system written in Golang
