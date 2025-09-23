@@ -1,0 +1,3 @@
+[submodule "themes/noir"]
+	path = themes/noir
+	url = https://github.com/prxshetty/hugo-noir.git

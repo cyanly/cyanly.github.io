@@ -1,0 +1,79 @@
+baseURL = 'https://cyan.ly/'
+languageCode = 'en-us'
+title = 'Cyan'
+theme = 'noir'
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[params]
+name = "Chao Yan"
+location = "London, UK"
+description = "I play computer keyboards."
+profile_image = "/images/profile.jpg"
+github = "https://github.com/cyanly"
+github_username = "cyanly"
+linkedin = "https://www.linkedin.com/in/cyanly/"
+linkedin_username = "cyanly"
+
+
+[[params.projects]]
+title = "Crypto Trading"
+description = "Browser / React, Go, NATs"
+tech = "2020"
+image = "/images/elw-spread.jpg"
+images = ["/images/elw-spread.jpg", "/images/elw-mcs.jpg", "/images/elw-trade.jpg"]
+
+[[params.projects]]
+title = "EMS Web Trading"
+description = "Browser / BackboneJs, BLPAPI, RMQ"
+tech = "2014"
+image = "/images/webtrader_s1.png"
+images = ["/images/webtrader_s2.png", "/images/webtrader_s1.png", "/images/webtrader_s3.png"]
+
+[[params.projects]]
+title = "KNXMonitor.com"
+description = "Node / Intelligent Building Debugger"
+tech = "2015"
+image = "/images/knxmonitor_s1.png"
+images = ["/images/knxmonitor_s1.png", "/images/knxmonitor_s2.png", "/images/knxmonitor_s3.png"]
+
+[[params.projects]]
+title = "Visual Portfolio"
+description = ".Net / MultiFund Rebalancer, PreTrade Optimiser"
+tech = "2009"
+image = "/images/transformer_s1.png"
+images = ["/images/transformer_s1.png", "/images/transformer_s2.png", "/images/transformer_s3.png"]
+
+[[params.projects]]
+title = "Trader Desktop"
+description = "WPF / performant OMS+EMS with a style"
+tech = "2012"
+image = "/images/traderdesktop_s1.png"
+images = ["/images/traderdesktop_s1.png", "/images/traderdesktop_s2.png", "/images/traderdesktop_s3.png"]
+
+[[params.projects]]
+title = "Genetic Programming on Trading Strategies"
+description = "Java"
+tech = "2006"
+image = "/images/geneprofit_s1.png"
+images = ["/images/geneprofit_s1.png", "/images/geneprofit_s2.png", "/images/geneprofit_s3.png"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = 'github-dark'
+    tabWidth = 2
+
+[menu]
+  [[menu.main]]
+    name = "Portfolio"
+    url = "/portfolio/"
+    weight = 3
+  [[menu.main]]
+    name = "Blogs"
+    url = "/blogs"
+    weight = 4

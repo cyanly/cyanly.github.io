@@ -1,0 +1,36 @@
+blogs:
+  - title: "Building an App Without Writing a Single Line of Code"
+    date: "Sep 23, 2025"
+    link: "/blogs/building-crypto-app-with-claude-code-2025"
+    summary: "Built an entire stable dollar bridging dApp app only by Claude Code coding agent, experiences and thoughts."
+    tags: []
+
+  - title: "Embedding JavaScript Engine in Go, a Survey"
+    date: "Feb 15, 2016"
+    link: "/blogs/embedding-javascript-in-go-survey"
+    summary: "Performance comparison of different JavaScript engines (Otto, Duktape, V8) that can be embedded in Go applications."
+    tags: []
+
+  - title: "GoTrade - github.com/cyanly/gotrade"
+    date: "Jan 23, 2016"
+    link: "/blogs/gotrade-fix-trading-system-golang-2016"
+    summary: "a FIX protocol electronic trading and order management system written in Golang"
+    tags: []
+
+  - title: "Building Effective Trading GUI"
+    date: "Jun 19, 2015"
+    link: "/blogs/building-effective-trading-ui-2015"
+    summary: "Things I have learned during iterations of professional UI craftsmanship: Language before frameworks; DevTools is a true friend; Contextual animations."
+    tags: []
+
+  - title: "Multiple VPN outgoing connections with Docker"
+    date: "May 25, 2015"
+    link: "/blogs/multiple-vpn-docker-2015"
+    summary: "Using Docker to maintain many *outgoing* VPN connections from single server to hundreds or thousands of building's IP addresses"
+    tags: []
+
+  - title: "Genetic Programming Applied on Stock Market Prediction"
+    date: "Sep 09, 2006"
+    link: "/blogs/gene-profit-2006"
+    summary: "In this project, a working comprehensive software package is implemented that accomplished three main categories of challenges: parallel distributed genetic programming engine, financial stock market prediction, and a visualised distributed network interface. This project meets and beyond its initial specifications in many ways. Firstly, a generic Distributed Genetic Programming engine is developed, which can be applied to problem solving other than financial trading. Secondly, a financial genetic programming with various improvements to current research in this area has been achieved. This project suggests a new way to measure fitness value for financial activity is derived, and has its own approach on choosing technical indicators. Thirdly, a favourable graphic engine with frames animation is developed, which can be taken out as a separate component to be re-used in future project in other areas. Finally, this project presents a software product brings all these features together – *GeneProfit*."
+    tags: []

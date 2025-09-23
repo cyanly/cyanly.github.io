@@ -1,0 +1,48 @@
+/* Instrument Sans - Variable Font */
+@font-face {
+    font-family: 'Instrument Sans';
+    src: url('/fonts/Instrument_Sans/InstrumentSans-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 400 700;
+    font-stretch: 75% 125%;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Instrument Sans';
+    src: url('/fonts/Instrument_Sans/InstrumentSans-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 400 700;
+    font-stretch: 75% 125%;
+    font-style: italic;
+}
+
+/* Anonymous Pro - Regular */
+@font-face {
+    font-family: 'Anonymous Pro';
+    src: url('/fonts/Anonymous_Pro/AnonymousPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Anonymous Pro - Bold */
+@font-face {
+    font-family: 'Anonymous Pro';
+    src: url('/fonts/Anonymous_Pro/AnonymousPro-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Anonymous Pro - Italic */
+@font-face {
+    font-family: 'Anonymous Pro';
+    src: url('/fonts/Anonymous_Pro/AnonymousPro-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Anonymous Pro - Bold Italic */
+@font-face {
+    font-family: 'Anonymous Pro';
+    src: url('/fonts/Anonymous_Pro/AnonymousPro-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}

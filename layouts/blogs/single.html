@@ -1,0 +1,21 @@
+{{ define "main" }}
+<link rel="stylesheet" href="/css/fonts.css" />
+<link rel="stylesheet" href="/css/post.css" />
+<section class="w-full md:w-3/4 lg:w-2/3 mx-auto py-12 px-4">
+    <div class="post-metadata">
+        <h1>{{ .Title }}</h1>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        {{ if .Params.tags }}
+        <div class="tags">
+            {{ range .Params.tags }}
+            <span class="tag">#{{ . }}</span>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+
+    <article class="markdown-body">
+        {{ .Content }}
+    </article>
+</section>
+{{ end }}
