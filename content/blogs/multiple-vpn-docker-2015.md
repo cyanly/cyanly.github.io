@@ -201,7 +201,7 @@ docker.listImages(function(err, images) {
 
 This is screenshot from KNXMonitor on three test buildings with different VPN options and conflicting subnet. There is no need to setup redial for dropped connection, our controller(a state machine) would simply kill and restart its container.
 
-![Multi VPN outgoing connection test](/images/knxmonitor/vpn_tests.png)
+![Multi VPN outgoing connection test](/images/vpn_tests.png)
 
 Thankfully the rise of Docker has made possible a major feature I'd never expect to solve by Docker while learning it for the whole time! The roller-coasting journey led me to the above solution has not been easy. Hopefully this article could help any other fellow coder in any way it could. 
 

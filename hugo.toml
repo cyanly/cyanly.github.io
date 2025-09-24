@@ -17,6 +17,12 @@ github_username = "cyanly"
 linkedin = "https://www.linkedin.com/in/cyanly/"
 linkedin_username = "cyanly"
 
+[[params.projects]]
+title = "Payment Gateway"
+description = "Rust, Go, Temporal"
+tech = "2024"
+image = "/images/boomfi_payments.png"
+images = ["/images/boomfi_payments.png", "/images/boomfi_rules.png", "/images/boomfi_temporal.png", "/images/boomfi_card.png"]
 
 [[params.projects]]
 title = "Crypto Trading"

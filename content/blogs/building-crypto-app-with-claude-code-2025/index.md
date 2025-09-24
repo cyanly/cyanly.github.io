@@ -8,11 +8,13 @@ draft: false
 
 ![stables.mov](app-ui.png)
 
-**tl;dr** Built an entire stable dollar bridging dApp app only by Claude Code coding agent, experiences and thoughts.
+> **tl;dr** Built an entire stable dollar bridging dApp only by Claude Code coding agent, my experiences and thoughts. It's like working with someone tireless but occasionally destructive, eager but lacking wisdom, capable but needing constant guidance.
 
 **Disclaimer:** This article is written by human, NOT by any LLM, except grammar checks. 
 
-Like every engineering professional, the past two hundred years (in current AI gold-rush time) have been spent stalking AI products and tooling, trying to figure out 'what can I do', or at least trying not to get left behind. The debate about which professions AI would kill first has raged for eons (again, in AI years), with plenty of consensus on the hit list. Programming has been a hot topic but generally considered safe. Or is it? A sudden surge of agentic CLI tools emerged: Claude Code, then Qwen Code, Opencode, OpenAI Codex. By the time you're reading this, even if it's just a week later, dozens more toys have certainly appeared.
+---
+
+**Like** every engineering professional, the past two hundred years (in current AI gold-rush time) have been spent stalking AI products and tooling, trying to figure out 'what can I do', or at least trying not to get left behind. The debate about which professions AI would kill first has raged for eons (again, in AI years), with plenty of consensus on the hit list. Programming has been a hot topic but generally considered safe. Or is it? A sudden surge of agentic CLI tools emerged: [Claude Code](https://claude.com/product/claude-code), then [Qwen Code](https://github.com/QwenLM/qwen-code), [Opencode](https://opencode.ai/), [OpenAI Codex](https://openai.com/codex/). By the time you're reading this, even if it's just a week later, dozens more toys have certainly appeared.
 
 Software development has been my companion for more than a decade: large and small projects, from systems managing multi-billion dollar assets for financial institutions to a few hundred lines of consulting algorithms, to tiny iOS apps that my parents pretend to use. The constants throughout? A developer, a code editor. For the first time, there's a new component: a coding agent.
 
@@ -24,7 +26,7 @@ My sceptical side has always won when it comes to LLMs doing actual coding. They
 
 In cryptocurrency, stablecoins, more precisely stable dollars like USDC, have been on the rise for all sorts of right and unfortunate reasons. And blockchains? There are LOTS of them, created before all the hype investment pivoted to AI. So transferring across networks, aka bridging, has become a necessity. For years, the common approach has been using AMM (automated market making) pools: essentially selling on one side and buying on another, to put it simply. And where there's a trader involved, fees and hidden spreads get charged.
 
-However, stablecoins represent the unfortunate defeat of the decentralisation dream, you see. USDC gets issued by Circle, a publicly listed, for-profit company. They have something called CCTP (Cross-Chain Transfer Protocol), a set of on-chain smart contracts allowing token burns on one network and mints on another. No fees. More importantly, no dodgy third party you're trusting not to run away with your money halfway through. With more competing stablecoins emerging, issuer-backed transfers should be increasingly in demand.
+However, stablecoins represent the unfortunate defeat of the decentralisation dream, you see. USDC gets issued by Circle, a publicly listed, for-profit company. They have something called [CCTP (Cross-Chain Transfer Protocol)](https://developers.circle.com/cctp), a set of on-chain smart contracts allowing token burns on one network and mints on another. No fees. More importantly, no dodgy third party you're trusting not to run away with your money halfway through. With more competing stablecoins emerging, issuer-backed transfers should be increasingly in demand.
 
 Why is there no UI for these protocols? Nobody bothers, no third party means no revenue to extract. On the flip side, people who need a UI aren't going to work out the 20 PDAs and binary shenanigans required to call these on-chain contracts directly. (I did and it was painful)
 
@@ -35,9 +37,15 @@ Perfect candidate for a project with gains measured in other ways: experimenting
 
 ### An unnecessary technical challenge
 
-LLMs would churn out a NextJS repo that's 80% functional almost in one go, given how much of it exists on GitHub. So, no. The choice fell on Dioxus, a Rust frontend framework where the app builds into WebAssembly and directly manages the DOM. Documentation? Generally lacking as they're moving through a major refactor. So Claude Code couldn't cheat from its training vectors. It would have to figure things out on the fly. 
+LLMs would churn out a NextJS repo that's 80% functional almost in one go, given how much of it exists on GitHub. 
 
-The kicker? Neither of us knew anything about Dioxus v0.7.0-alpha.
+So, no. 
+
+The choice fell on Dioxus, a Rust frontend framework where the app builds into WebAssembly and directly manages the DOM. Documentation? Generally lacking as they're moving through a major refactor. So Claude Code couldn't cheat from its training vectors. It would have to figure things out on the fly. 
+
+The kicker? 
+
+Neither of us knew anything about [Dioxus v0.7.0-alpha](https://dioxuslabs.com/learn/0.7/essentials/advanced/).
 
 ## The starting point
 
@@ -68,7 +76,7 @@ But there's a but... which would send us tumbling into the frustrations chapter 
 
 ### Think like me
 
-It tends to know where a change becoming too much of hack, then taking a step back refactoring related components for a better pattern. Although probably because I left in CLAUDE.md to ask it always self intrspect output and have a second personality critise its work simulating Linus Tovalds.
+It tends to know where a change becoming too much of hack, then taking a step back refactoring related components for a better pattern. Although probably because I left in `CLAUDE.md` to ask it always self intrspect output and have a second personality critise its work [simulating Linus Tovalds](https://gist.github.com/afshawnlotfi/044ed6649bf905d0bd33c79f7d15f254).
 
 That moment observing it failed to find a solution from Dioxus repo, then proceed to search through Github Issues and found a hack by someone in discussion, was purely magical and never gets old.
 
@@ -93,11 +101,11 @@ Here's a surprise: it's better than average engineers at modelling entity schema
 
 Humans learn with temporal context. Knowledge in our brains has intrinsic timestamps, rather than being purely a graph with no time weighted edges and nodes. Claude Code has limited to non-existent awareness of this.
 
-The fundamentals: transformer layers process my prompts through attention mechanisms, contextualizing them with CLAUDE.md instructions and any RAG-style file retrieval it performs. More often than not, even with serious DON'Ts in CLAUDE.md, the same mistakes would resurface. Such mistakes were usually patterns too common in GitHub source code (its training data) that proved unfit for the current task. Even when discovering this itself without prompting, it tended to rubber-band back, as if the weights were too strongly biased toward those patterns.
+The fundamentals: transformer layers process my prompts through attention mechanisms, contextualizing them with `CLAUDE.md` instructions and any RAG-style file retrieval it performs. More often than not, even with serious DON'Ts in `CLAUDE.md`, the same mistakes would resurface. Such mistakes were usually patterns too common in GitHub source code (its training data) that proved unfit for the current task. Even when discovering this itself without prompting, it tended to rubber-band back, as if the weights were too strongly biased toward those patterns.
 
 ### Bound by sessions
 
-Invisible walls rank among the top frustrations in badly designed adventure games. Same goes for coding agents. While CLAUDE.md serves as rudimentary memory, explicit instructions to write to that file are required. Otherwise nothing gets remembered between sessions. The capability feels tuned far too weakly by its makers to optmise token burning rate.
+Invisible walls rank among the top frustrations in badly designed adventure games. Same goes for coding agents. While `CLAUDE.md` serves as rudimentary memory, explicit instructions to write to that file are required. Otherwise nothing gets remembered between sessions. The capability feels tuned far too weakly by its makers to optmise token burning rate.
 
 ### Rabbit holes
 
@@ -133,7 +141,9 @@ Humans observe the world first by vision, before interpreting into words and lan
 
 An opportunity exists here for better AI-fit source control, or iterations on git that understand the conversational nature of AI-assisted development.
 
-### Who's the audience
+---
+
+### Who're the best target users
 
 The fundamentals of a "good engineer" still remain (for now):
 
@@ -145,7 +155,7 @@ Equally though, it's not for product geniuses who can't code but think they can 
 
 **Designer capable**: Models these days can generate high-quality code. They can also generate amazing graphics, like Google's recent Nano Banana examples. But bridging the gap between the two? They can generate pixel-perfect user interfaces as images, but can't code them out in CSS and HTML elements to bring them to life.
 
-## The verdict
+## The Verdict
 
 Did a working app emerge? Yes. [stables.mov](https://stables.mov) exists and works.
 
